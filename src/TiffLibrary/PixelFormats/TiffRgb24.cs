@@ -86,5 +86,10 @@ namespace TiffLibrary.PixelFormats
         /// <returns>True if the <paramref name="left"/> parameter is not equal to the <paramref name="right"/> parameter; otherwise, false.</returns>
         public static bool operator !=(TiffRgb24 left, TiffRgb24 right) => !left.Equals(right);
 
+        /// <summary>
+        /// Implement ToString()
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString() => $"{R:X2}{G:X2}{B:X2}";
     }
 }
