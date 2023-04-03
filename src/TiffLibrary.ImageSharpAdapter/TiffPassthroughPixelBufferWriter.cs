@@ -51,7 +51,7 @@ namespace TiffLibrary.ImageSharpAdapter
             _cachedHandle = null;
         }
 
-        private class PassthoughRowSpanHandle : TiffPixelSpanHandle<TSource>
+        private sealed class PassthoughRowSpanHandle : TiffPixelSpanHandle<TSource>
         {
             private TiffPassthroughPixelBufferWriter<TSource, TDestination>? _parent;
             private TiffPixelSpanHandle<TDestination>? _innerHandle;

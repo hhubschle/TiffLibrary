@@ -6,7 +6,7 @@ using SixLabors.ImageSharp.Processing.Processors;
 
 namespace TiffLibrary.ImageSharpAdapter
 {
-    internal class WriteRegionProcessor<TSource> : IImageProcessor where TSource : unmanaged, IPixel<TSource>
+    internal sealed class WriteRegionProcessor<TSource> : IImageProcessor where TSource : unmanaged, IPixel<TSource>
     {
         private readonly Image<TSource> _image;
 

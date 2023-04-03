@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace TiffLibrary.ImageSharpAdapter
 {
-    internal class ImageSharpContentReaderWriter : TiffFileContentReaderWriter
+    internal sealed class ImageSharpContentReaderWriter : TiffFileContentReaderWriter
     {
         private readonly Stream _stream;
 

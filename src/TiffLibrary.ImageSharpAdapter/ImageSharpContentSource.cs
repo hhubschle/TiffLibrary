@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace TiffLibrary.ImageSharpAdapter
 {
-    internal class ImageSharpContentSource : TiffFileContentSource
+    internal sealed class ImageSharpContentSource : TiffFileContentSource
     {
         private ImageSharpContentReaderWriter _reader;
 

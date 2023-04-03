@@ -92,7 +92,7 @@ namespace TiffLibrary.ImageSharpAdapter
 
         #region RowSpanHandle
 
-        private class RowSpanHandle : TiffPixelSpanHandle<TTiffPixel>
+        private sealed class RowSpanHandle : TiffPixelSpanHandle<TTiffPixel>
         {
             private ImageSharpPixelBufferWriter<TImageSharpPixel, TTiffPixel>? _parent;
             private ImageFrame<TImageSharpPixel>? _image;
@@ -134,7 +134,7 @@ namespace TiffLibrary.ImageSharpAdapter
 
         #region ColumnSpanHandle
 
-        private class ColumnSpanHandle : TiffPixelSpanHandle<TTiffPixel>
+        private sealed class ColumnSpanHandle : TiffPixelSpanHandle<TTiffPixel>
         {
             private ImageSharpPixelBufferWriter<TImageSharpPixel, TTiffPixel>? _parent;
             private ImageFrame<TImageSharpPixel>? _image;
