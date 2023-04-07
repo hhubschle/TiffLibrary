@@ -200,4 +200,7 @@
       <LastGenOutput>TiffTagReaderYCbCrExtensions.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath) c:\bin" />
+  </Target>
 </Project>
