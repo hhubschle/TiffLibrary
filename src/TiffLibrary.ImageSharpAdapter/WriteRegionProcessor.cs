@@ -21,7 +21,7 @@ namespace TiffLibrary.ImageSharpAdapter
         }
     }
 
-    internal class WriteRegionProcessor<TSource, TDest> : IImageProcessor<TDest> where TSource : unmanaged, IPixel<TSource> where TDest : unmanaged, IPixel<TDest>
+    internal sealed class WriteRegionProcessor<TSource, TDest> : IImageProcessor<TDest> where TSource : unmanaged, IPixel<TSource> where TDest : unmanaged, IPixel<TDest>
     {
         private readonly WriteRegionProcessorCore<TSource, TDest> _core;
 
