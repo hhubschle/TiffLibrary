@@ -20,6 +20,14 @@
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <AnalysisLevel>latest</AnalysisLevel>
     <IsTrimmable>true</IsTrimmable>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageProjectUrl />
+    <PackageId>$(AssemblyName)HH</PackageId>
+    <Authors>YiGolden,hhubschle</Authors>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Orc\orcag3\TiffLibrary\build\keyhh.snk</AssemblyOriginatorKeyFile>
+    <Version>$(AssemblyVersion)</Version>
+    <RepositoryUrl />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net461' OR '$(TargetFramework)' == 'netstandard2.0'">
@@ -200,7 +208,4 @@
       <LastGenOutput>TiffTagReaderYCbCrExtensions.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(TargetPath) c:\bin" />
-  </Target>
 </Project>
