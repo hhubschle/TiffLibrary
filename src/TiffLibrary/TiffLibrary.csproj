@@ -20,7 +20,7 @@
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <AnalysisLevel>latest</AnalysisLevel>
     <IsTrimmable>true</IsTrimmable>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl />
     <PackageId>$(AssemblyName)HH</PackageId>
     <Authors>YiGolden,hhubschle</Authors>
@@ -28,6 +28,8 @@
     <AssemblyOriginatorKeyFile>C:\Orc\orcag3\TiffLibrary\build\keyhh.snk</AssemblyOriginatorKeyFile>
     <Version>$(AssemblyVersion)</Version>
     <RepositoryUrl />
+    <AssemblyName>$(MSBuildProjectName)HH</AssemblyName>
+    <PackageOutputPath>c:\bin\nugetpackages\$(AssemblyName)</PackageOutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)' == 'net461' OR '$(TargetFramework)' == 'netstandard2.0'">
