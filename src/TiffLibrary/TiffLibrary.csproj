@@ -25,7 +25,7 @@
     <PackageId>$(AssemblyName)HH</PackageId>
     <Authors>YiGolden,hhubschle</Authors>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>C:\Orc\orcag3\TiffLibrary\build\keyhh.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)\build\keyhh.snk</AssemblyOriginatorKeyFile>
     <Version>$(AssemblyVersion)</Version>
     <RepositoryUrl />
     <AssemblyName>$(MSBuildProjectName)HH</AssemblyName>
