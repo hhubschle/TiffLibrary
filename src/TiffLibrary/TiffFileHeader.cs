@@ -222,11 +222,11 @@ namespace TiffLibrary
                     imageFileDirectoryOffset = BinaryPrimitives.ReverseEndianness(imageFileDirectoryOffset);
                 }
 
-                MemoryMarshal.Write(destination, ref byteOrderFlag);
-                MemoryMarshal.Write(destination.Slice(2), ref version);
-                MemoryMarshal.Write(destination.Slice(4), ref byteSizeOfOffsets);
-                MemoryMarshal.Write(destination.Slice(6), ref zeroConstant);
-                MemoryMarshal.Write(destination.Slice(8), ref imageFileDirectoryOffset);
+                MemoryMarshal.Write(destination, in byteOrderFlag);
+                MemoryMarshal.Write(destination.Slice(2), in version);
+                MemoryMarshal.Write(destination.Slice(4), in byteSizeOfOffsets);
+                MemoryMarshal.Write(destination.Slice(6), in zeroConstant);
+                MemoryMarshal.Write(destination.Slice(8), in imageFileDirectoryOffset);
             }
             else
             {
@@ -249,9 +249,9 @@ namespace TiffLibrary
                     imageFileDirectoryOffset32 = BinaryPrimitives.ReverseEndianness(imageFileDirectoryOffset32);
                 }
 
-                MemoryMarshal.Write(destination, ref byteOrderFlag);
-                MemoryMarshal.Write(destination.Slice(2), ref version);
-                MemoryMarshal.Write(destination.Slice(4), ref imageFileDirectoryOffset32);
+                MemoryMarshal.Write(destination, in byteOrderFlag);
+                MemoryMarshal.Write(destination.Slice(2), in version);
+                MemoryMarshal.Write(destination.Slice(4), in imageFileDirectoryOffset32);
             }
 
         }

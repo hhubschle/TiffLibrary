@@ -247,13 +247,13 @@ namespace TiffLibrary
                 {
                     rwCount = 8;
                     long offset = ifdOffset;
-                    MemoryMarshal.Write(buffer, ref offset);
+                    MemoryMarshal.Write(buffer, in offset);
                 }
                 else
                 {
                     rwCount = 4;
                     int offset32 = (int)ifdOffset;
-                    MemoryMarshal.Write(buffer, ref offset32);
+                    MemoryMarshal.Write(buffer, in offset32);
                 }
 
                 // Skip over IFD entries.

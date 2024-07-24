@@ -137,7 +137,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     byte item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, type, values.Count, stackBuffer);
@@ -260,7 +260,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     ushort item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.Short, values.Count, stackBuffer);
@@ -309,7 +309,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     short item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.SShort, values.Count, stackBuffer);
@@ -358,7 +358,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     uint item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.Long, values.Count, stackBuffer);
@@ -408,7 +408,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     int item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.SLong, values.Count, stackBuffer);
@@ -457,7 +457,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     ulong item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.Long8, values.Count, stackBuffer);
@@ -506,7 +506,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     long item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.SLong8, values.Count, stackBuffer);
@@ -555,7 +555,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     float item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.Float, values.Count, stackBuffer);
@@ -604,7 +604,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     double item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.Double, values.Count, stackBuffer);
@@ -653,7 +653,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     TiffRational item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.Rational, values.Count, stackBuffer);
@@ -702,7 +702,7 @@ namespace TiffLibrary
                 for (i = 0; i < values.Count; i++)
                 {
                     TiffSRational item = values[i];
-                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), ref item);
+                    MemoryMarshal.Write(stackBuffer.Slice(ElementSize * i), in item);
                 }
 
                 AddOrUpdateEntry(tag, TiffFieldType.SRational, values.Count, stackBuffer);

@@ -255,7 +255,7 @@ namespace TiffLibrary
             return new TiffImageEncoderPipelineAdapter<TPixel>(MemoryPool, imageEncoder, ifdEncoder);
         }
 
-        private ITiffImageEncoderPipelineNode<TPixel> PrependOrientationMiddleware<TPixel>(ITiffImageEncoderPipelineNode<TPixel> node) where TPixel : unmanaged
+        private TiffImageEncoderPipelineNode<TPixel> PrependOrientationMiddleware<TPixel>(ITiffImageEncoderPipelineNode<TPixel> node) where TPixel : unmanaged
         {
             return new TiffImageEncoderPipelineNode<TPixel>(new TiffApplyOrientationMiddleware<TPixel>(Orientation))
             {

@@ -3,7 +3,8 @@
   <PropertyGroup>
     <Title>TiffLibrary</Title>
     <Description>A .NET library for decoding and encoding TIFF files.</Description>
-    <TargetFrameworks>net461;netstandard2.0;netstandard2.1;netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <NoWarn>$(NoWarn);CA1008;CA1024;CA1027;CA1028;CA1051;CA1303;CA1716;CA1720;CA2000;CA2213</NoWarn>
     <!-- CA1008: Enums should have zero value (TODO Can we fix this?)-->
     <!-- CA1024: Use properties where appropriate -->

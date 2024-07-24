@@ -150,8 +150,8 @@ namespace TiffLibrary
                 tag = BinaryPrimitives.ReverseEndianness(tag);
                 type = BinaryPrimitives.ReverseEndianness(type);
             }
-            MemoryMarshal.Write(destination, ref tag);
-            MemoryMarshal.Write(destination.Slice(2), ref type);
+            MemoryMarshal.Write(destination, in tag);
+            MemoryMarshal.Write(destination.Slice(2), in type);
 
             destination = destination.Slice(4);
             if (context.ByteCountOfValueOffsetField == 4)
@@ -162,8 +162,8 @@ namespace TiffLibrary
                     count32 = BinaryPrimitives.ReverseEndianness(count32);
                     offset32 = BinaryPrimitives.ReverseEndianness(offset32);
                 }
-                MemoryMarshal.Write(destination, ref count32);
-                MemoryMarshal.Write(destination.Slice(4), ref offset32);
+                MemoryMarshal.Write(destination, in count32);
+                MemoryMarshal.Write(destination.Slice(4), in offset32);
 
                 return 12;
             }
@@ -180,8 +180,8 @@ namespace TiffLibrary
                     count64 = BinaryPrimitives.ReverseEndianness(count64);
                     offset64 = BinaryPrimitives.ReverseEndianness(offset64);
                 }
-                MemoryMarshal.Write(destination, ref count64);
-                MemoryMarshal.Write(destination.Slice(8), ref offset64);
+                MemoryMarshal.Write(destination, in count64);
+                MemoryMarshal.Write(destination.Slice(8), in offset64);
 
                 return 20;
             }
@@ -293,12 +293,12 @@ namespace TiffLibrary
             if (context.ByteCountOfValueOffsetField == 4)
             {
                 uint valueOffset32 = (uint)ValueOffset;
-                MemoryMarshal.Write(destination, ref valueOffset32);
+                MemoryMarshal.Write(destination, in valueOffset32);
             }
             else
             {
                 ulong valueOffset64 = (ulong)ValueOffset;
-                MemoryMarshal.Write(destination, ref valueOffset64);
+                MemoryMarshal.Write(destination, in valueOffset64);
             }
 
             if (context.IsLittleEndian != BitConverter.IsLittleEndian)
