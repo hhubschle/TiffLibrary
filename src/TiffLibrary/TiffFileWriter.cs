@@ -454,8 +454,8 @@ namespace TiffLibrary
             long offset = position;
             foreach (ReadOnlyMemory<byte> segment in buffer)
             {
-                var chunkSize = 4_000_000;
-                var written = 0;
+                int chunkSize = 4_000_000;
+                int written = 0;
                 while (written < segment.Length)
                 {
                     chunkSize = Math.Min(chunkSize, segment.Length - written);
