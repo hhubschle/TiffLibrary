@@ -212,6 +212,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.139" />
+    <PackageReference Update="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" />
+    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.146" />
   </ItemGroup>
 </Project>
